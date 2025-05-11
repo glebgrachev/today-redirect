@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting...</title>
-  <script type="text/javascript">
-    // Получаем параметр id из URL
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get('id');
-    
-    // Формируем ссылку для редиректа
-    const redirectUrl = `today://com.todaycity.app/details?id=${id}`;
-    
-    // Производим редирект
-    window.location.href = redirectUrl;
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const storyId = params.get('id');
+        if (storyId) {
+            const redirectUrl = `today://com.todaycity.app/details?id=${storyId}`;
+            window.location.href = redirectUrl; // Переадресация на ваш app-схему
+        }
+    </script>
 </head>
 <body>
-  <p>Redirecting to your app...</p>
+    <p>Redirecting to the app...</p>
 </body>
 </html>
