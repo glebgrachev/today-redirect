@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting...</title>
-  <meta http-equiv="refresh" content="0;url=https://your-destination-url.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Today App</title>
+    <meta http-equiv="refresh" content="0;url=today://today.com/details?id=0WUYQrHO4YfXgSWhonXi">
+    <script type="text/javascript">
+        setTimeout(function() {
+            window.location.href = "https://today.com"; // fallback if app is not installed
+        }, 1000);
+    </script>
 </head>
 <body>
-  <p>If you are not redirected, <a href="https://your-destination-url.com">click here</a>.</p>
+    <p>If you're not redirected, <a href="today://today.com/details?id=0WUYQrHO4YfXgSWhonXi">click here</a> to open the app.</p>
 </body>
 </html>
-
